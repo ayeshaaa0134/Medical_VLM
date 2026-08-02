@@ -1,0 +1,4 @@
+question,presence_rate,majority_baseline_acc
+necrotic core (NCR) present,0.9648842777334398,0.9648842777334398
+edema (ED) present,0.9992019154030327,0.9992019154030327
+enhancing tumor (ET) present,0.9736632083000798,0.9736632083000798
