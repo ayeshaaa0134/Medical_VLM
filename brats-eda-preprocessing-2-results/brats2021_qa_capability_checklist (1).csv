@@ -1,0 +1,9 @@
+question_type,source_needed,available_from_brats_alone,note
+Tumor location / laterality (left/right/bilateral),segmentation + affine,True,"Safe, once Section 9's orientation check is clean for the case in question."
+"Tumor size / volume (whole tumor, per sub-region)",segmentation + voxel spacing,True,"Safe — compute from ORIGINAL geometry (Section 4/5), not the resized encoder input."
+Sub-region presence (necrotic core / edema / enhancing tumor),segmentation,True,Watch the majority-baseline shortcut risk flagged in Section 2 for whichever label scores high.
+Multifocality (single vs. multiple tumor sites),"segmentation, connected components",True,Safe — computed in Section 3.
+MGMT / genetic status,BraTS 2021 Task 2 (separate download) or UCSF-PDGM/Burdenko,False,Not in this package. Drop this question type or source Task 2 separately.
+Pseudoprogression vs. true progression,Burdenko-GBM-Progression (longitudinal + labels),False,"Impossible without Burdenko — BraTS2021 is single-timepoint, no progression labels exist at all."
+Age / sex / demographics,not bundled with BraTS2021 Task 1,False,No demographic file ships with this package (confirmed in Section 11).
+Treatment / radiation timing,"clinical record (Burdenko only, in the original plan)",False,Not available anywhere in BraTS2021.
